@@ -43,6 +43,6 @@ class Pop3Transport(EmailTransport):
                 yield message
             except MessageParseError:
                 continue
-            self.server.dele(i + 1)
+            # self.server.dele(i + 1)
         self.server.quit()
         return
