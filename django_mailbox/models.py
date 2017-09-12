@@ -464,7 +464,8 @@ class Message(models.Model):
 
     message_id = models.CharField(
         _(u'Message ID'),
-        max_length=255
+        max_length=255,
+        unique=True
     )
 
     in_reply_to = models.ForeignKey(
